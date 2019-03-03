@@ -24,7 +24,7 @@ export default function AnalogClockLayout({ hour, minutes, seconds, styles, show
     });
     // +1.5 to center align
     const hourStyle = Object.assign({}, styles.hour, {
-        transform: `translateX(-50%) translateY(-100%) rotate(${hour * 30 + 1.5}deg)`,
+        transform: `translateX(-50%) translateY(-100%) rotate(${(hour + minutes / 60) * 30 + 1.5}deg)`,
     });
     return (
         <div style={styles.base}>
